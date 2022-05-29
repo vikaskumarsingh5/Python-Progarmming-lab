@@ -1,0 +1,124 @@
+# Q-->write a python function to reverse the order of words in a string.
+def order_reverse(str):
+    str.reverse()
+    return " ".join(str)
+str=input("entre the string").split()
+c=order_reverse(str)
+print(c)
+
+#Q--> Python program to display all the prime numbers within an interval through function.
+def prime(lower,upper):
+    for num in range(lower, upper + 1):
+        if num > 1:
+            for i in range(2, num):
+                if (num % i) == 0:
+                    break
+            else:
+                print(num,end=" ")
+lower = int(input())
+upper = int(input())
+prime(lower,upper)
+
+# Q-->write a python function which counts vowels and consonants in a word.
+def count(word):
+    c=d=0
+    for i in word:
+        if i=='A' or i=='E' or i=='I' or i=='O' or i=='U' or i=='a' or i=='e' or i=='i' or i=='o' or i=='u':
+            c+=1
+        elif i>='A' or i<='Z' and  i>='a' or i<='z':
+            d+=1
+    print("no. of vowels are :",c)
+    print("no. of consonants are :",d)
+word=input("enter the word :")
+count(word)
+
+# Q-->write a python function to find the maximum of three numbers.
+def max(a,b,c):
+    if(a>b and a>c):
+        return a
+    elif(b>c):
+        return b
+    else:
+        return c
+a=int(input())
+b=int(input())
+c=int(input())
+d=max(a,b,c)
+print(d)
+
+# Q--write a python function to reverse a string.
+def reverse(str):
+    a=str[::-1]
+    return a
+str=input()
+c=reverse(str)
+print(c)
+
+# Q-->write a python function to find the sum of all numbers in a list.
+def add(numbers):
+    sum=0
+    for i in numbers:
+        sum=sum+i
+    return sum
+numbers=input("entre the numbers").split()
+numbers=list(map(int,numbers))
+a=add(numbers)
+print(a)
+
+# Q-->write a python function to check the given string is panagram or not.
+def panagram(str):
+    c=0
+    alphabet="abcdefghijklmnopqrstuvwxyz"
+    for i in alphabet:
+        if i not in str.lower():
+            return 0
+        else:
+            c+=1
+    if(c==26):
+        return 1
+str=input("enter the string")
+if panagram(str)==1:
+    print("string is panagram")
+else:
+    print("string is not panagram")
+
+# Q--> Write a Python function that takes a list and returns a new list with unique elements of the first list.
+def unique(a):
+    x=[]
+    for i in a:
+        if i not in x:
+            x.append(i)
+    return x
+a=(input("enter the numbers")).split()
+a=list(map(int,a))
+c=unique(a)
+print(c)
+
+#Q-->write a python function to calculate the factorial of a number.
+def fact(n):
+    f=1
+    while(n>0):
+        f=f*n
+        n-=1
+    return f
+n=int(input("entre the number"))
+c=fact(n)
+print(c)
+
+#Q-->write a python function to check a number is perfect or not.
+def perfect(n):
+    i=1
+    sum=0
+    while(i<=(n//2)):
+        if(n%i==0):
+            sum+=i
+        i+=1
+    if(sum==n):
+        return 1
+    else:
+        return 0
+n=int(input("enter the no."))
+if perfect(n)==1:
+    print("No. is perfect")
+else:
+    print("No. is not perfect")
