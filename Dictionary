@@ -1,0 +1,126 @@
+# Q-->wap to get all the unique keys from a dictionary.
+a={}
+n=int(input("entre the size"))
+for i in range(n):
+    key=int(input())
+    value=int(input())
+    a.update({key:value})
+b=[]
+for i in a:
+    if i not in b:
+        b.append(i)
+print(b)
+
+#Q-->wap in python to merge two dictionaries.
+a={}
+size=int(input("enter the size"))
+for i in range(0,size):
+    x=int(input('enter the key'))
+    y=int(input("enter the value"))
+    a.update({x:y})
+b={}
+size=int(input("enter the size"))
+for i in range(0,size):
+    x=int(input('enter the key'))
+    y=int(input("enter the value"))
+    b.update({x:y})
+b.update(a)
+print(b)
+
+#Q-->wap to find the sum of all values in a given dictionary.
+a={}
+size=int(input("enter the size"))
+for i in range(0,size):
+    x=int(input('enter the key'))
+    y=int(input("enter the value"))
+    a.update({x:y})
+sum=0
+for i in (a.values()):
+    sum=sum+i
+print('sum','=',sum)
+
+# Q-->wap in python to find the multiply of all the items in a dictionary.
+a={}
+size=int(input("enter the size"))
+for i in range(0,size):
+    x=int(input('enter the key'))
+    y=int(input("enter the value"))
+    a.update({x:y})
+mul=1
+for i in (a.values()):
+    mul=mul*i
+print(mul)
+
+# Q-->wap in python to map two lists into  a dictionary.
+key=input("enter the keys").split()
+key=list(map(int,key))
+value=input("enter the values").split()
+value=list(map(int,value))
+dict=dict(zip(key,value))
+print(dict)
+
+# Q-->wap in python to remove a key from a dictionary.
+a={}
+size=int(input("enter the size"))
+for i in range(0,size):
+    x=int(input('enter the key'))
+    y=int(input("enter the value"))
+    a.update({x:y})
+key=int(input("enter the key you want to delete"))
+if key in a:
+    a.pop(key)
+    print(a)
+else:
+    print("key is not valid")
+
+# Q-->wap in python to replace a given key value pair in a dictionary.
+a={}
+size=int(input("enter the size :"))
+for i in range(0,size):
+    x=int(input("entre the key"))
+    y=int(input("entre the value"))
+    a[x]=y
+key=int(input("enter the replacement key"))
+a.pop(key)
+key1=int(input("enter the key"))
+value1=int(input('enter the value'))
+a[key1]=value1
+print(a)
+
+#Q-->wap in python to display the keys  of a dictionary in alphabetical order.
+a={}
+size=int(input("enter the size"))
+for i in range(0,size):
+    x=input('enter the key')
+    y=input("enter the value")
+    a.update({x:y})
+for i in sorted(a.keys()):
+    print(i,end="")
+print()
+
+# Q--> wap to iterate over dictionaries using for loops.
+dict1={}
+size=int(input("enter size"))
+for i in range(0,size):
+    key=int(input())
+    value=int(input())
+    dict1.update({key:value})
+dict2={}
+size=int(input("enter size"))
+for i in range(0,size):
+    key1=int(input())
+    value2=int(input())
+    dict2.update({key1:value2})
+for i,j in dict2.items():
+    dict1[i]=j
+print(dict1)
+
+# Q-->wap to get the maximum and minimum value from a dictionary.
+dict1={}
+size=int(input("enter size"))
+for i in range(0,size):
+    key=int(input())
+    value=int(input())
+    dict1.update({key:value})
+print(max(dict1.values()),' ',end="")
+print(min(dict1.values()),' ',end="")
