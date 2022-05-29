@@ -1,0 +1,127 @@
+1.Write a program in python to print a reversed numpy array with the element type float.
+sol:
+import numpy as np
+a=list(map(int,input('enter your numbers').split()))
+a.reverse()
+print(np.array(a,dtype=float))
+
+
+2.Write a program in python to convert the given list into 3*3 array.
+sol:
+import numpy as np
+a=list(map(int,input().split()))
+print(np.array(a).reshape(3,3))
+
+
+
+3.Write a program in python to print an array of size N*M with its main diagonalelements as 1 and 0 everywhere else.
+sol:
+import numpy as np
+a=list(map(int,(input('enter order of array').split())))
+m=a[0]
+n=a[1]
+if n==m:
+    print(np.identity(n))
+
+
+
+4.you are given 2 integer arrays A and B.Perform the following operations.
+  1.Add
+  2.Subtract
+  3.Multiply
+  4.Integer Division
+  5.Mod
+  6.Power
+sol:
+import numpy as np
+a=[1,2,3,4]
+b=np.array([[5,6,7,8]])
+print(np.add(a,b))
+print(np.subtract(a,b))
+print(np.multiply(a,b))
+print(np.floor_divide(a,b))
+print(np.mod(a,b))
+print(np.power(a,b))
+
+
+
+5.Write a program in python to print the transpose and flatten of a given integer array matrix.
+sol:
+import numpy as np
+lst=[]
+r=int(input('enter no of rows'))
+c=int(input('enter no of col'))
+for i in range(r):
+    for j in range(c):
+        ele=int(input('enter element'))
+        lst.append(ele)
+a=np.array(lst).reshape(r,c)
+print(np.transpose(a))
+print(np.ravel(a))
+
+
+
+6.Write a program in python to search a specified row in a given integer matrix array.
+sol:
+import numpy as np
+a=np.array([[1,2,3],
+            [4,5,6],
+            [7,8,9]])
+print(a)
+
+print([1,2,3] in a.tolist())
+
+print([4,5,6] in a.tolist())
+
+
+
+
+7.Write a program in python to find the occurances of elements or pair of elements in an array.
+sol:
+import numpy as np
+a=np.array([[1, 2, 3],
+            [2, 3, 4],
+            [2, 3, 5]])
+            
+out=repr(a).count('2, 3')
+
+print(out)
+
+
+
+
+
+8.Write a program in python to find the maximum and minimum elements in a given array.
+sol:
+import numpy as np
+a=np.array([[1,2,3],
+            [4,5,6],
+            [7,8,9]])
+
+print(a.max())
+
+print(a.min())
+
+
+
+
+
+9.Write a program in python to find the mean and median of a given array.
+sol:
+import numpy as np
+a=np.array([1,2,3,4,5,6,7,8,9])
+
+print(np.mean(a))
+
+print(np.median(a))
+
+
+
+10.Write a program in python to find the variance and standard deviation of a given array.
+sol:
+import numpy as np
+a=([1,2,3,4,5,6,7,8,9,10,11])
+
+print(np.var(a))
+
+print(np.std(a))
